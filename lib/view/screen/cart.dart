@@ -10,6 +10,28 @@ class Cartscreen extends StatefulWidget {
 class _CartscreenState extends State<Cartscreen> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return SafeArea(
+      child: Scaffold(
+        body: Column(
+          children: [
+            Row(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 50),
+                  child: Container(
+                    height: 110,
+                    width:410,
+                    decoration: BoxDecoration(
+                      color:Colors.redAccent,
+                    ),
+                  ),
+                )
+              ],
+            )
+          ],
+        ),
+
+      ),
+    );
   }
 }

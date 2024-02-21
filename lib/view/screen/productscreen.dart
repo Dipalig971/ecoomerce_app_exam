@@ -1,3 +1,4 @@
+import 'package:ecoomerce_app_exam/utills/cartlist.dart';
 import 'package:flutter/material.dart';
 
 class Productscreen extends StatefulWidget {
@@ -10,6 +11,9 @@ class Productscreen extends StatefulWidget {
 class _ProductscreenState extends State<Productscreen> {
   @override
   Widget build(BuildContext context) {
+
+    var data=ModalRoute.of(context)!.settings.arguments as Map;
+
     return SafeArea(
       child: Scaffold(
         body: Column(
@@ -21,15 +25,16 @@ class _ProductscreenState extends State<Productscreen> {
                 color: Color(0xffE4DCD7),
                 borderRadius: BorderRadius.vertical(bottom:Radius.circular(30))
               ),
-              child: Image.asset('asset/img/women.jpg',fit: BoxFit.contain,),
+              child: Image.asset(data['img'],fit: BoxFit.contain,),
             ),
             Row(
               children: [
                 Padding(
                   padding: const EdgeInsets.symmetric(vertical: 30,horizontal: 20),
-                  child: Text('Kenzo Embroiderd',style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold,fontSize: 20),),
+                  child: Text(data['name'],style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold,fontSize: 20),),
                 ),
-                SizedBox(width: 60,),
+                SizedBox(width: 60,
+                ),
                 Icon(Icons.star),
                 Text(' 4.8',style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold,fontSize: 16),),
                 Text('(1K Reviews)',style: TextStyle(color: Colors.grey),),
@@ -43,10 +48,7 @@ class _ProductscreenState extends State<Productscreen> {
                 ),
                 Padding(
                   padding: const EdgeInsets.symmetric(vertical: 10,horizontal: 20),
-                  child: Text('Womens wear is outfits made specifically for and worn by women.'
-                      ' Salwar suits, saaris, lehnga etc in Indian tradition and Skirts, shirts, sweaters, trousers'
-                      ', coats, chemises, and jeans, etc.'
-                      'in western countries are examples of common womens clothing',style: TextStyle(color: Colors.grey,fontWeight: FontWeight.bold),),
+                  child: Text(data['description'],style: TextStyle(color: Colors.grey,fontWeight: FontWeight.bold),),
                 ),
               ],
             ),
@@ -89,16 +91,22 @@ class _ProductscreenState extends State<Productscreen> {
                   padding: const EdgeInsets.symmetric(vertical: 50,horizontal: 20),
                   child: Text('Price',style: TextStyle(color: Colors.grey,fontWeight: FontWeight.bold,fontSize: 20),),
                 ),
-                Text('\$60.00',style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold,fontSize: 20),),
+                Text('\$ ${data['price']}',style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold,fontSize: 20),),
                 SizedBox(width: 60,),
-                Container(
-                  height: 60,
-                  width: 180,
-                  decoration: BoxDecoration(
-                      color: Colors.black,
-                    borderRadius: BorderRadius.circular(20)
+                InkWell(
+                  onTap: () {
+                    Navigator.of(context).pushNamed('/cart');
+                    Cartlist.add(data);
+                  },
+                  child: Container(
+                    height: 60,
+                    width: 180,
+                    decoration: BoxDecoration(
+                        color: Colors.black,
+                      borderRadius: BorderRadius.circular(20)
+                    ),
+                    child: Center(child: Text('Add to Cart',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 19),)),
                   ),
-                  child: Center(child: Text('Add to Cart',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 19),)),
                 )
               ],
             ),

@@ -1,15 +1,16 @@
 List productlist=[
   {
     'name':'Kenzo Embroider',
-    'pirce':'\$60.00',
+    'price':'60.00',
     'description':'Womens wear is outfits made specifically for and worn by women.'
         ' Salwar suits, saaris, lehnga etc in Indian tradition and Skirts, shirts, sweaters, trousers, coats, chemises, and jeans, etc.'
         'in western countries are examples of common womens clothing',
     'img':'asset/img/women.jpg'
+
   },
   {
     'name':'Dresses',
-    'pirce':'\$50.00',
+    'price':'50.00',
     'description':'Womens wear is outfits made specifically for and worn by women.'
         ' Salwar suits, saaris, lehnga etc in Indian tradition and Skirts, shirts, sweaters, trousers, coats, chemises, and jeans, etc.'
         'in western countries are examples of common womens clothing',
@@ -17,7 +18,7 @@ List productlist=[
   },
   {
     'name':'Kenzo ',
-    'pirce':'\$10.00',
+    'price':'10.00',
     'description':'Womens wear is outfits made specifically for and worn by women.'
         ' Salwar suits, saaris, lehnga etc in Indian tradition and Skirts, shirts, sweaters, trousers, coats, chemises, and jeans, etc.'
         'in western countries are examples of common womens clothing',
@@ -28,7 +29,7 @@ List productlist=[
 List productlist1 =[
   {
     'name':'Fashion',
-    'pirce':'\$90.00',
+    'price':'90.00',
     'description':'Womens wear is outfits made specifically for and worn by women.'
         ' Salwar suits, saaris, lehnga etc in Indian tradition and Skirts, shirts, sweaters, trousers, coats, chemises, and jeans, etc.'
         'in western countries are examples of common womens clothing',
@@ -36,7 +37,7 @@ List productlist1 =[
   },
   {
     'name':'Women Fashion',
-    'pirce':'\$70.00',
+    'price':'70.00',
     'description':'Womens wear is outfits made specifically for and worn by women.'
         ' Salwar suits, saaris, lehnga etc in Indian tradition and Skirts, shirts, sweaters, trousers, coats, chemises, and jeans, etc.'
         'in western countries are examples of common womens clothing',
@@ -44,7 +45,7 @@ List productlist1 =[
   },
   {
     'name':'Kenzo Embroider',
-    'pirce':'\$90.00',
+    'price':'90.00',
     'description':'Womens wear is outfits made specifically for and worn by women.'
         ' Salwar suits, saaris, lehnga etc in Indian tradition and Skirts, shirts, sweaters, trousers, coats, chemises, and jeans, etc.'
         'in western countries are examples of common womens clothing',

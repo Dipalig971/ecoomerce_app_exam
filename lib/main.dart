@@ -14,8 +14,9 @@ class Ecommerce_Application extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+      initialRoute: '/home',
       routes: {
-        '/':(context) => Homescreen(),
+        '/home':(context) => Homescreen(),
         '/product':(context) => Productscreen(),
         '/cart':(context) => Cartscreen(),
     },
